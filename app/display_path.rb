@@ -1,5 +1,25 @@
 require 'pry'
 
+def getting_started
+    puts 'Please choose an odd number between 3 - 99'
+
+    number = gets.to_i
+
+    grid = Array.new(number)
+
+    (0...number).each do |i|
+        puts 'Please fill yout grid with "-", one row at a time!'
+        grid[i] = gets.strip
+    end
+
+    grid = grid.join
+
+    return {
+        number: number,
+        grid: grid
+    }
+end
+
 def middle(array)
     mid = (array.count - 1) / 2
     return array[mid]
@@ -36,7 +56,6 @@ def error_handling(n, grid_array)
 end
 
 def displayPathtoPrincess(n, grid)
-
     grid_array = Array.new(grid.split(''))
 
     if error_handling(n, grid_array) != nil
@@ -44,7 +63,7 @@ def displayPathtoPrincess(n, grid)
     end
 
     verticle = corner_position(n, grid_array).split(' ')[0]
-    
+
     horizontal = corner_position(n, grid_array).split(' ')[1]
 
     steps_needed = ((n - 1) / 2)
@@ -61,3 +80,7 @@ def displayPathtoPrincess(n, grid)
 
     return string.strip
 end
+
+input = getting_started
+
+puts displayPathtoPrincess(input[:number], input[:grid])
