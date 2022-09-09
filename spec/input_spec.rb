@@ -28,6 +28,11 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
         expect(response).to eq('Error: Input Needs to be an Odd Number Between 3 - 99')
     end
 
+    it 'Returns Error if grid is not n x n format' do
+        n = 7
 
-    
+        response = displayPathtoPrincess(n, @grid)
+
+        expect(response).to eq("Grid Doesn't Match n Format")
+    end
 end
