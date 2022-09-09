@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 # require './app/file_name'
 
 RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
@@ -8,13 +9,23 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
     end
 
     it 'n is an odd number' do
-        displayPathtoPrincess(@n, @grid)
+        response = displayPathtoPrincess(@n, @grid)
 
         expect(@n.odd?).to be true
     end
 
-    it 'returns error if n equals an even number' do
+    it 'returns error if n is not an odd number from 3 - 99' do
+        n = 4
 
+        response = displayPathtoPrincess(n, @grid)
+        
+        expect(response).to eq('Error: Input Needs to be an Odd Number Between 3 - 99')
+
+        n = 101
+
+        response = displayPathtoPrincess(n, @grid)
+
+        expect(response).to eq('Error: Input Needs to be an Odd Number Between 3 - 99')
     end
 
 
