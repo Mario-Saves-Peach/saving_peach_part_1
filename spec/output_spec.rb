@@ -12,7 +12,7 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
         it 'returns steps needed to save peach' do
             response = displayPathtoPrincess(@n, @grid)
 
-            expect(response).to eq("DOWN \nLEFT")
+            expect(response).to eq("DOWN\nLEFT")
         end
 
         it 'returns steps needed to save peach with different input' do
@@ -22,7 +22,7 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
 
             response = displayPathtoPrincess(n, grid)
     
-            expect(response).to eq("UP \nUP \nRIGHT \nRIGHT")
+            expect(response).to eq("UP\nUP\nRIGHT\nRIGHT")
         end
     end
 end
