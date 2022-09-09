@@ -48,11 +48,11 @@ def displayPathtoPrincess(n, grid)
     string = ''
 
     steps_needed.times do
-        string << "#{verticle} \n"
+        string << "#{verticle}\n"
     end
 
     steps_needed.times do
-        string << "#{horizontal} \n"
+        string << "#{horizontal}\n"
     end
 
     return string.strip
