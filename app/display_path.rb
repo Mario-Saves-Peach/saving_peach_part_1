@@ -1,14 +1,11 @@
 require 'pry'
 
 def getting_started
-    puts 'Please choose an odd number between 3 - 99'
-
     number = gets.to_i
 
     grid = Array.new(number)
 
     (0...number).each do |i|
-        puts 'Please fill yout grid with "-", one row at a time!'
         grid[i] = gets.strip
     end
 
