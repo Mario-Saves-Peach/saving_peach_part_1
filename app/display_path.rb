@@ -19,10 +19,7 @@ def corner_position(n, array)
     end
 end
 
-def displayPathtoPrincess(n, grid)
-
-    grid_array = Array.new(grid.split(''))
-
+def error_handling(n, grid_array)
     number_confirmation = (n.odd? && 3 <= n && n < 100)
 
     grid_confirmation = (n * n) == grid_array.count
@@ -35,6 +32,15 @@ def displayPathtoPrincess(n, grid)
         return 'Error: Mario is not centered on your grid' 
     elsif corner_position(n, grid_array) == 'Error'
         return 'Error: Princess Peach is not in a corner'
+    end
+end
+
+def displayPathtoPrincess(n, grid)
+
+    grid_array = Array.new(grid.split(''))
+
+    if error_handling(n, grid_array) != nil
+        return error_handling(n, grid_array)
     end
 
     peaches_corner = corner_position(n, grid_array).split(' ')
