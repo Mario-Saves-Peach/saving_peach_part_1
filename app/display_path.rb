@@ -10,5 +10,7 @@ def displayPathtoPrincess(n, grid)
 
     if number_confirmation == false
         return 'Error: Input Needs to be an Odd Number Between 3 - 99'
+    elsif number_confirmation && grid_confirmation == false
+        return "Grid Doesn't Match n x n Format"
     end
 end
