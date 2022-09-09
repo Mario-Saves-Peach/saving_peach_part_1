@@ -1,5 +1,10 @@
 require 'pry'
 
+def middle(array)
+    mid = (array.count - 1) / 2
+    return array[mid]
+end
+
 def displayPathtoPrincess(n, grid)
 
     grid_array = Array.new(grid.split(''))
@@ -12,5 +17,7 @@ def displayPathtoPrincess(n, grid)
         return 'Error: Input Needs to be an Odd Number Between 3 - 99'
     elsif number_confirmation && grid_confirmation == false
         return "Grid Doesn't Match n x n Format"
+    elsif middle(grid_array) != 'm'
+        return 'Error: Mario is not centered on your grid' 
     end
 end
