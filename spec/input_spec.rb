@@ -47,6 +47,12 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
             expect(response).to eq("Error: Mario is not centered on your grid")
         end
 
-        
+        it "Returns Error if peach isn't in the corner of the grid" do
+            grid = '----m--p-'
+
+            response = displayPathtoPrincess(@n, grid)
+
+            expect(response).to eq("Error: Princess Peach is not in a corner")
+        end
     end
 end
