@@ -14,5 +14,15 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
 
             expect(response).to eq('DOWN \nLEFT')
         end
+
+        it 'returns steps needed to save peach with different input' do
+            n = 5 
+
+            grid = '----p-------m------------'
+
+            response = displayPathtoPrincess(n, grid)
+    
+            expect(response).to eq('UP \nUP \nLEFT \nLEFT')
+        end
     end
 end
