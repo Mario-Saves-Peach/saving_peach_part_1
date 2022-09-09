@@ -1,4 +1,19 @@
-require 'pry'
+def getting_started
+    number = gets.to_i
+
+    grid = Array.new(number)
+
+    (0...number).each do |i|
+        grid[i] = gets.strip
+    end
+
+    grid = grid.join
+
+    return {
+        number: number,
+        grid: grid
+    }
+end
 
 def middle(array)
     mid = (array.count - 1) / 2
@@ -19,10 +34,7 @@ def corner_position(n, array)
     end
 end
 
-def displayPathtoPrincess(n, grid)
-
-    grid_array = Array.new(grid.split(''))
-
+def error_handling(n, grid_array)
     number_confirmation = (n.odd? && 3 <= n && n < 100)
 
     grid_confirmation = (n * n) == grid_array.count
@@ -36,14 +48,20 @@ def displayPathtoPrincess(n, grid)
     elsif corner_position(n, grid_array) == 'Error'
         return 'Error: Princess Peach is not in a corner'
     end
+end
 
-    peaches_corner = corner_position(n, grid_array).split(' ')
+def displayPathtoPrincess(n, grid)
+    grid_array = Array.new(grid.split(''))
+
+    if error_handling(n, grid_array) != nil
+        return error_handling(n, grid_array)
+    end
+
+    verticle = corner_position(n, grid_array).split(' ')[0]
+
+    horizontal = corner_position(n, grid_array).split(' ')[1]
 
     steps_needed = ((n - 1) / 2)
-
-    verticle = peaches_corner[0]
-
-    horizontal = peaches_corner[1]
 
     string = ''
 
@@ -57,3 +75,7 @@ def displayPathtoPrincess(n, grid)
 
     return string.strip
 end
+
+input = getting_started
+
+puts displayPathtoPrincess(input[:number], input[:grid])
