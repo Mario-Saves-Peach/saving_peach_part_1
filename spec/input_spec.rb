@@ -13,6 +13,7 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
             response = displayPathtoPrincess(@n, @grid)
 
             expect(@n.odd?).to be true
+            expect(response).to eq('DOWN \nLEFT')
         end
 
         it 'returns error if n is not an odd number from 3 - 99' do
@@ -31,6 +32,12 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
     end
 
     describe 'grid input' do
+        it 'Returns Answer if input is correct' do
+            response = displayPathtoPrincess(@n, @grid)
+
+            expect(response).to eq('DOWN \nLEFT')
+        end
+
         it 'Returns Error if grid is not n x n format' do
             n = 7
 
