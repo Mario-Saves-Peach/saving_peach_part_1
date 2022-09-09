@@ -43,13 +43,11 @@ def displayPathtoPrincess(n, grid)
         return error_handling(n, grid_array)
     end
 
-    peaches_corner = corner_position(n, grid_array).split(' ')
+    verticle = corner_position(n, grid_array).split(' ')[0]
+    
+    horizontal = corner_position(n, grid_array).split(' ')[1]
 
     steps_needed = ((n - 1) / 2)
-
-    verticle = peaches_corner[0]
-
-    horizontal = peaches_corner[1]
 
     string = ''
 
