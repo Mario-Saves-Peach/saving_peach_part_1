@@ -1,5 +1,3 @@
-require 'pry'
-
 def getting_started
     number = gets.to_i
 
