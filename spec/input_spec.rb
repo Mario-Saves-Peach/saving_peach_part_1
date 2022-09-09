@@ -38,6 +38,16 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
             expect(response).to eq('DOWN \nLEFT')
         end
 
+        it 'Returns Answer if input is different than defult' do
+            n = 5
+
+            grid = 'p-----------m------------'
+
+            response = displayPathtoPrincess(n, grid)
+
+            expect(response).to eq('UP \nUP \nLEFT \nLEFT')
+        end
+
         it 'Returns Error if grid is not n x n format' do
             n = 7
 
