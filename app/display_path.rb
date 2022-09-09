@@ -36,4 +36,12 @@ def displayPathtoPrincess(n, grid)
     elsif corner_position(n, grid_array) == 'Error'
         return 'Error: Princess Peach is not in a corner'
     end
+
+    peaches_corner = corner_position(n, grid_array).split(' ')
+
+    steps_needed = ((n - 1) / 2)
+
+    verticle = peaches_corner[0]
+
+    horizontal = peaches_corner[1]
 end
