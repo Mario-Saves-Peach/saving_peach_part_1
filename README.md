@@ -70,7 +70,7 @@ LEFT
 
 <h2 align='center'>Where this challenge came from and how I planned to build it</h2>
 
-<p align='center'>This project came from HackerRank challenge called Bot Saves Princess: (https://www.hackerrank.com/challenges/saveprincess)
+<p align='center'>This project came from a HackerRank challenge called Bot Saves Princess: (https://www.hackerrank.com/challenges/saveprincess)
 Although at first glance may seem really tough, once you mess around with it a little, you'll find that it's a fun challenge to solve! I find that Pseudocoding not only helps break down the problem and solve it, but guides the project in the right direction! Here is my Pseudocoding process I used to build this project! </p>  
 
 
