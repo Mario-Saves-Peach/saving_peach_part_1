@@ -12,37 +12,35 @@
 
 <h2 align='center'>How to Clone and Play Game</h2>
 
-<p align='left'>Step 1: First you want to open terminal and cd into the file you want to clone this project into</p>
-
-<p align='left'>Step 2: Run in terminal to clone repo into folder </p> 
+<p align='left'>Step 1: To clone this project, create your folder and cd into it. Clone this project by running this command.</p> 
 
 ```git clone git@github.com:Mario-Saves-Peach/saving_peach_part_1.git```
 
-<p align='left'>Step 3: cd into the project like so </p> 
+<p align='left'>Step 2: cd into the project folder like so </p> 
 
 ```cd saving_peach_part_1 ```
 
-<p align='left'>Step 4: Run this in terminal start program </p> 
+<p align='left'>Step 3: Run this command in terminal start program </p> 
 
 ``` ruby app/display_path.rb ```
 
-<p align='left'>Step 5: Awesome, time to start! Input an odd number between 3 - 99, hit enter when inputted number (For this example i'll be using 5)</p>
+<p align='left'>Step 4: Awesome, time to start! Input an odd number between 3 - 99, hit enter when inputted number (For this example i'll be using 5)</p>
 
 ```5```
 
-<p align='left'>Step 6: Now we have to build a grid line by line using (-) by making a 5 x 5 grid (or whatever number you inputted like so)</p>
+<p align='left'>Step 5: Now we have to build a grid line by line using (-) by making a 5 x 5 grid (or whatever number you inputted like so)</p>
 
 ```-----```  <p>Hit enter and repeat until grid is built (make sure to include Princess Peach in one of the four corners by using 'p'</p>
 
 ```-----```
 
-```--m--``` <p>Also be sure that mario is in the center of your gird using 'm'</p>
+```--m--``` <p>Also be sure that mario is in the center of your grid using 'm'</p>
 
 ```-----```
 
 ```p----```
 
-<p align='left'>Step 7: Great should have a grid that looks like so</p>
+<p align='left'>Step 6: Great should have a grid that looks like so</p>
 
 ```-----```
 
@@ -54,7 +52,7 @@
 
 ```p----```
 
-<p align='left'>Step 8: If everything was inputted correctly, hit enter and find out how to save Princess Peach</p>
+<p align='left'>Step 7: If everything was inputted correctly, hit enter and find out how to save Princess Peach</p>
 
 <p align='left'>Example Results:</p>
 
