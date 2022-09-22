@@ -10,7 +10,7 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
 
     describe 'Saving Princess Peach!!' do
         it 'returns steps needed to save peach' do
-            response = displayPathtoPrincess(@n, @grid)
+            response = MoveFinder.new.displayPathtoPrincess(@n, @grid)
 
             expect(response).to eq("DOWN\nLEFT")
         end
@@ -20,7 +20,7 @@ RSpec.describe 'displayPathtoPrincess(n, grid) Method' do
 
             grid = '----p-------m------------'
 
-            response = displayPathtoPrincess(n, grid)
+            response = MoveFinder.new.displayPathtoPrincess(n, grid)
     
             expect(response).to eq("UP\nUP\nRIGHT\nRIGHT")
         end
