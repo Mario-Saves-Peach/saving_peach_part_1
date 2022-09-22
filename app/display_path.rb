@@ -53,8 +53,10 @@ end
 def displayPathtoPrincess(n, grid)
     grid_array = Array.new(grid.split(''))
 
-    if error_handling(n, grid_array) != nil
-        return error_handling(n, grid_array)
+    error = error_handling(n, grid)
+
+    if error != nil
+        return error
     end
 
     verticle = corner_position(n, grid_array).split(' ')[0]
