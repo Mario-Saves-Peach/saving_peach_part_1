@@ -1,19 +1,29 @@
-def getting_started
-    number = gets.to_i
+class GameRunner
+    def initialize
+    end
+end
 
-    grid = Array.new(number)
-
-    (0...number).each do |i|
-        grid[i] = gets.strip
+class GridBuilder
+    attr_reader :number, :grid
+    
+    def initialize
+        @number = 0
+        @grid = Array.new
     end
 
-    grid = grid.join
+    def build
+        @number = gets.to_i
 
-    return {
-        number: number,
-        grid: grid
-    }
+        @grid = Array.new(@number)
+    
+        (0...@number).each do |i|
+            @grid[i] = gets.strip
+        end
+    
+        @grid = @grid.join
+    end
 end
+
 
 def middle(array)
     mid = (array.count - 1) / 2
